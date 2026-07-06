@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — ForLabs</title>
+<link rel="icon" href="icone.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FBFBFD;
+    --bg-soft: #F5F5F7;
+    --white: #FFFFFF;
+    --border: #D2D2D7;
+    --text: #1D1D1F;
+    --text-dim: #86868B;
+    --blue: #2994F2;
+    --font: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6; -webkit-font-smoothing: antialiased; padding-bottom: 60px; }
+  a { text-decoration: none; color: var(--blue); transition: opacity 0.2s; }
+  a:hover { opacity: 0.8; }
+  .nav-simple { padding: 24px 32px; border-bottom: 1px solid var(--border); background: rgba(251,251,253,0.8); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 10; }
+  .logo { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.1rem; color: var(--text); }
+  .container { max-width: 760px; margin: 60px auto; padding: 0 24px; }
+  .back-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 500; margin-bottom: 32px; }
+  h1 { font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700; letter-spacing: -0.04em; margin-bottom: 8px; }
+  .updated { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 40px; display: block; }
+  h2 { font-size: 1.3rem; font-weight: 600; margin: 40px 0 16px; letter-spacing: -0.02em; }
+  p, li { color: var(--text-dim); font-size: 1rem; margin-bottom: 16px; }
+  ul { margin-left: 24px; margin-bottom: 16px; }
+</style>
+</head>
+<body>
+
+<nav class="nav-simple">
+  <div style="max-width: 1080px; margin: 0 auto;">
+    <a href="index.html" class="logo">
+      <img src="icone.svg" alt="ForLabs" width="28" height="28">
+      ForLabs
+    </a>
+  </div>
+</nav>
+
+<div class="container">
+  <a href="index.html" class="back-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Voltar para a página inicial
+  </a>
+
+  <h1>Política de Privacidade</h1>
+  <span class="updated">Última atualização: Julho de 2026</span>
+
+  <p>A sua privacidade e a segurança dos dados do seu laboratório são prioridades máximas para nós. Esta Política de Privacidade explica como o ForLabs coleta, utiliza e protege as informações de acordo com a Lei Geral de Proteção de Dados Pessoais (LGPD).</p>
+
+  <h2>1. Quais informações coletamos</h2>
+  <ul>
+    <li><strong>Dados de Conta:</strong> Nome, e-mail e cargo dos usuários cadastrados no sistema.</li>
+    <li><strong>Dados Operacionais:</strong> Informações sobre lotes, resultados de testes, manuais (PDFs), imagens de amostras e laudos técnicos inseridos ativamente na plataforma.</li>
+    <li><strong>Logs de Acesso:</strong> Dados de auditoria que rastreiam quando e por quem uma informação foi modificada dentro do ambiente logado.</li>
+  </ul>
+
+  <h2>2. Como utilizamos os dados</h2>
+  <p>Utilizamos os dados exclusivamente para o funcionamento do sistema SaaS, permitindo que a sua equipe acesse históricos, gere laudos e audite alterações. <strong>O ForLabs não vende, não aluga e não compartilha</strong> os dados industriais e laboratoriais da sua empresa com terceiros sob nenhuma circunstância.</p>
+
+  <h2>3. Onde os dados são armazenados</h2>
+  <p>As informações são mantidas em infraestrutura de nuvem de ponta (AWS/Supabase), com criptografia em trânsito e em repouso. Cada empresa cliente roda em um ambiente logicamente isolado, o que significa que um cliente jamais terá acesso aos dados de outro cliente da plataforma.</p>
+
+  <h2>4. Direitos do Titular (LGPD)</h2>
+  <p>A qualquer momento, o Administrador responsável pela conta da empresa pode:</p>
+  <ul>
+    <li>Acessar, corrigir ou inativar contas de usuários colaboradores.</li>
+    <li>Realizar o download completo do banco de dados (Dump em formato JSON/CSV).</li>
+    <li>Solicitar a exclusão definitiva e permanente de todos os dados do laboratório dos nossos servidores, caso decida cancelar o serviço.</li>
+  </ul>
+
+  <h2>5. Contato</h2>
+  <p>Se você tiver alguma dúvida sobre a nossa Política de Privacidade ou sobre o tratamento dos dados da sua empresa, sinta-se à vontade para entrar em contato diretamente com a nossa equipe pelos canais oficiais de suporte na plataforma ForLabs.</p>
+</div>
+
+</body>
+</html>
