@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ForLabs — Controle de Qualidade para o seu Laboratório</title>
+<title>ForLabs</title>
 <link rel="icon" href="icone.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -700,6 +700,7 @@
         <span class="turl">app.forlabs.com.br/dashboard</span>
       </div>
       <div class="dash-body">
+        
         <div class="dash-sidebar">
           <div class="slabel">Principal</div>
           <div class="sitem active">
@@ -731,16 +732,16 @@
 
         <div class="dash-main">
           <div>
-            <div class="dash-greet">
-              <h2>Bem-vindo(a) de volta</h2>
+            <div class="dash-greet" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+              <h2 style="font-size:1.4rem;">Bem-vindo(a) de volta</h2>
               <p>Visão geral do laboratório em tempo real.</p>
             </div>
 
             <div class="stat-row">
               <div class="stat-card">
                 <div class="stat-top">
-                  <span class="label">Total de registros</span>
-                  <span class="stat-icon" style="background:#EFF6FF; color:#2563EB;">
+                  <span class="label">Total de Registros</span>
+                  <span class="stat-icon" style="background:#EFF6FF; color:#3B82F6;">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 2v6.5L4.5 17a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L15 8.5V2"/></svg>
                   </span>
                 </div>
@@ -749,51 +750,108 @@
               </div>
               <div class="stat-card">
                 <div class="stat-top">
-                  <span class="label">Registros no mês</span>
-                  <span class="stat-icon" style="background:#ECFDF5; color:#059669;">
+                  <span class="label">Registros no Mês</span>
+                  <span class="stat-icon" style="background:#ECFDF5; color:#10B981;">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
                   </span>
                 </div>
                 <div class="stat-value">134</div>
-                <div class="stat-note up">↗ +12% em relação ao mês anterior</div>
+                <div class="stat-note up" style="color: #059669;">↗ +12% em relação ao mês anterior</div>
               </div>
               <div class="stat-card">
                 <div class="stat-top">
-                  <span class="label">Análises de Pigmentos</span>
-                  <span class="stat-icon" style="background:#FFFBEB; color:#D97706;">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/></svg>
+                  <span class="label">Registros no Ano</span>
+                  <span class="stat-icon" style="background:#FFF7ED; color:#F97316;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
                   </span>
                 </div>
-                <div class="stat-value">84</div>
-                <div class="stat-note up">L*a*b* processados</div>
+                <div class="stat-value">1.250</div>
+                <div class="stat-note up" style="color: #059669;">↗ +5% vs. ano passado</div>
               </div>
             </div>
 
             <div class="panel-row">
               <div class="panel">
-                <div class="panel-head"><h4>Atividade recente da equipe</h4><span class="live-tag">TEMPO REAL</span></div>
-                <div class="activity-item">
-                  <span class="act-ic" style="background:#EFF6FF; color:#2563EB;">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 2v6.5L4.5 17a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L15 8.5V2"/></svg>
-                  </span>
-                  <div>
-                    <div class="act-name">Lote AM-2204 (Tinta Acrílica)</div>
-                    <div class="act-meta">Laudo exportado em PDF · 09:14</div>
-                  </div>
-                  <span class="act-badge">TESTE</span>
+                <div class="panel-head" style="margin-bottom: 24px;">
+                  <h4 style="font-size: 1rem; color: #0F172A;">Análises e Testes por Mês (Ano Atual)</h4>
                 </div>
-                <div class="activity-item">
-                  <span class="act-ic" style="background:#F5F3FF; color:#7C3AED;">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/></svg>
-                  </span>
-                  <div>
-                    <div class="act-name">Pigmento Dióxido de Titânio</div>
-                    <div class="act-meta">Delta L*a*b* calculado · 09:07</div>
-                  </div>
-                  <span class="act-badge">COLORIMETRIA</span>
+                
+                <div style="display: flex; align-items: flex-end; gap: 14px; height: 160px; border-bottom: 1px dashed #E2E8F0; margin-bottom: 12px;">
+                  <div style="flex: 1.5; background: #3B82F6; height: 30%; border-radius: 4px 4px 0 0;"></div>
+                  <div style="flex: 1.5; background: #3B82F6; height: 100%; border-radius: 4px 4px 0 0;"></div>
+                  <div style="flex: 1.5; background: #3B82F6; height: 75%; border-radius: 4px 4px 0 0;"></div>
+                  <div style="flex: 1.5; background: #3B82F6; height: 8%; border-radius: 4px 4px 0 0;"></div>
+                  <div style="flex: 1.5; background: #3B82F6; height: 16%; border-radius: 4px 4px 0 0;"></div>
+                  <div style="flex: 1.5; background: #3B82F6; height: 32%; border-radius: 4px 4px 0 0;"></div>
+                  <div style="flex: 1.5; background: #3B82F6; height: 24%; border-radius: 4px 4px 0 0;"></div>
+                  <div style="flex: 1.5; background: #3B82F6; height: 45%; border-radius: 4px 4px 0 0;"></div>
+                  <div style="flex: 1.5; background: #3B82F6; height: 60%; border-radius: 4px 4px 0 0;"></div>
+                  <div style="flex: 1.5; background: #3B82F6; height: 20%; border-radius: 4px 4px 0 0;"></div>
+                  <div style="flex: 1.5; background: #3B82F6; height: 80%; border-radius: 4px 4px 0 0;"></div>
+                  <div style="flex: 1.5; background: #3B82F6; height: 50%; border-radius: 4px 4px 0 0;"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: #94A3B8; font-weight: 600; text-transform: capitalize; padding: 0 4px;">
+                  <span>Jan</span><span>Fev</span><span>Mar</span><span>Abr</span><span>Mai</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Set</span><span>Out</span><span>Nov</span><span>Dez</span>
                 </div>
               </div>
+
+              <div class="panel">
+                <div class="panel-head">
+                  <h4 style="font-size: 0.95rem; color: #0F172A;">Atividade Recente</h4>
+                  <span class="live-tag">TEMPO REAL</span>
+                </div>
+                
+                <div class="activity-item" style="padding: 10px 0;">
+                  <span class="act-ic" style="background:#EFF6FF; color:#3B82F6; border: 1px solid #DBEAFE;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 2v6.5L4.5 17a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L15 8.5V2"/></svg>
+                  </span>
+                  <div style="flex: 1; min-width: 0;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                      <span class="act-name" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 130px;">Resina Acrílica...</span>
+                      <span class="act-badge" style="font-size: 0.55rem; color: #475569; background: #F1F5F9;">REVESTIMENTO</span>
+                    </div>
+                    <div class="act-meta" style="display: flex; justify-content: space-between;">
+                      <span>LabTech · Lote 10...</span>
+                      <span>09:23</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="activity-item" style="padding: 10px 0;">
+                  <span class="act-ic" style="background:#EFF6FF; color:#3B82F6; border: 1px solid #DBEAFE;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 2v6.5L4.5 17a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L15 8.5V2"/></svg>
+                  </span>
+                  <div style="flex: 1; min-width: 0;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                      <span class="act-name">Tinta Premium XYZ</span>
+                      <span class="act-badge" style="font-size: 0.55rem; color: #475569; background: #F1F5F9;">LÁTEX</span>
+                    </div>
+                    <div class="act-meta" style="display: flex; justify-content: space-between;">
+                      <span>Cliente B · Lote A/B</span>
+                      <span>15:32</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="activity-item" style="padding: 10px 0;">
+                  <span class="act-ic" style="background:#FFFBEB; color:#D97706; border: 1px solid #FEF3C7;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/></svg>
+                  </span>
+                  <div style="flex: 1; min-width: 0;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                      <span class="act-name">Dióxido de Titânio</span>
+                      <span class="act-badge" style="font-size: 0.55rem; color: #475569; background: #F1F5F9;">COLORIMETRIA</span>
+                    </div>
+                    <div class="act-meta" style="display: flex; justify-content: space-between;">
+                      <span>Fornecedor A · Lote...</span>
+                      <span>Ontem</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
+            
           </div>
         </div>
       </div>
@@ -814,17 +872,17 @@
             <li><span class="check">×</span> Anotações em pranchetas que mancham, rasgam ou se perdem</li>
             <li><span class="check">×</span> Histórico de lotes espalhado em dezenas de planilhas diferentes</li>
             <li><span class="check">×</span> Impossível auditar com precisão quem alterou ou aprovou um resultado</li>
-            <li><span class="check">×</span> Perda de tempo absurda procurando laudos e testes antigos</li>
+            <li><span class="check">×</span> Perda de tempo procurando laudos e testes antigos</li>
           </ul>
         </div>
         <div class="migration-col is-after">
           <span class="migration-tag tag-after">Padrão ForLabs</span>
-          <h3>O SaaS Definitivo</h3>
+          <h3>O Sistema Definitivo</h3>
           <ul>
-            <li><span class="check">✓</span> Crie categorias e campos dinâmicos do seu jeito</li>
-            <li><span class="check">✓</span> Anexos (PDF, imagens) vinculados direto à ficha do lote</li>
-            <li><span class="check">✓</span> Log de atividades rigoroso: saiba quem fez o quê e quando</li>
-            <li><span class="check">✓</span> <strong>Multiplataforma:</strong> 100% responsivo para PC, tablet e celular</li>
+            <li><span class="check">✓</span> Categorias e campos totalmente dinâmicos, moldados à sua rotina</li>
+            <li><span class="check">✓</span> Gestão inteligente de arquivos: anexe PDFs e imagens direto na ficha</li>
+            <li><span class="check">✓</span> Rastreabilidade total com logs rigorosos à prova de erros humanos</li>
+            <li><span class="check">✓</span> 100% responsivo para PC, tablet e celular</li>
           </ul>
         </div>
       </div>
@@ -953,7 +1011,7 @@
                     <span>Amostra Teste</span><span>Lote</span><span>DE (Delta)</span><span>Status</span>
                   </div>
                   <div class="scr-row">
-                    <span style="font-weight: 600; color: #1E293B;">Dióxido de Titânio R-902</span>
+                    <span style="font-weight: 600; color: #1E293B;">Dióxido de Titânio</span>
                     <span style="color:#94A3B8">LT-881</span>
                     <span style="color:#059669; font-weight:700; font-family:monospace;">0.45</span>
                     <span><span class="pill pill-green">Aprovado</span></span>
@@ -988,7 +1046,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 2v6.5L4.5 17a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L15 8.5V2"/></svg>
           </div>
           <h3>Formulários Dinâmicos</h3>
-          <p>Esqueça sistemas rígidos. Você mesmo cadastra se a "Tinta Acrílica" precisa de pH, Viscosidade e Cobertura.</p>
+          <p>Esqueça sistemas rígidos. Você mesmo cadastra se a amostra precisa de pH, Viscosidade e Cobertura.</p>
         </div>
         <div class="module">
           <div class="module-icon" style="background:var(--purple-soft); color:var(--purple-deep);">
@@ -1076,10 +1134,10 @@
             <span class="audit-action">Adicionou Teste: Resina Premium</span>
             <span class="audit-time">09:14</span>
           </div>
-          <div class="audit-row">
+          <div class="audit-row ok">
             <span class="audit-dot" style="background:var(--amber); box-shadow:0 0 0 3px var(--amber-soft);"></span>
             <span class="audit-id">LOG-122</span>
-            <span class="audit-action">Alterou dados técnicos (Viscosidade)</span>
+            <span class="audit-action">Alterou dados técnicos</span>
             <span class="audit-time">09:22</span>
           </div>
           <div class="audit-row ok">
@@ -1091,7 +1149,7 @@
           <div class="audit-row ok">
             <span class="audit-dot" style="background:var(--purple); box-shadow:0 0 0 3px var(--purple-soft);"></span>
             <span class="audit-id">LOG-124</span>
-            <span class="audit-action">Anexou arquivo (Foto Leneta.jpg)</span>
+            <span class="audit-action">Anexou arquivo (Foto.jpg)</span>
             <span class="audit-time">09:41</span>
           </div>
         </div>
@@ -1100,13 +1158,13 @@
           <div class="feature-item">
             <div>
               <h4>Permissões Rígidas por Cargo</h4>
-              <p>O "Analista" foca na operação dos laudos, enquanto o "Admin" gerencia categorias, permissões e extração de dados do banco.</p>
+              <p>O Analista foca na operação dos laudos, enquanto o Administrador gerencia categorias, permissões e extração de dados do banco.</p>
             </div>
           </div>
           <div class="feature-item">
             <div>
               <h4>Armazenamento em Nuvem Segura</h4>
-              <p>As fotos, PDFs e arquivos das amostras são guardados em buckets isolados, amarrados direto à ficha correspondente.</p>
+              <p>As fotos, PDFs e arquivos das amostras são guardados em pastas seguras, amarrados direto à ficha correspondente.</p>
             </div>
           </div>
         </div>
@@ -1148,7 +1206,7 @@
             <span class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
           </div>
           <div class="faq-answer">
-            <p>Seus dados são hospedados em servidores de altíssimo nível na nuvem (usando a infraestrutura global da AWS via Supabase). Os ambientes são completamente isolados (SaaS Multi-empresa), garantindo que apenas a sua equipe tenha acesso aos seus lotes e manuais.</p>
+            <p>Seus dados são hospedados em servidores de altíssimo nível na nuvem. Os ambientes são completamente isolados, garantindo que apenas a sua equipe tenha acesso aos seus lotes e manuais.</p>
           </div>
         </div>
 
@@ -1158,7 +1216,7 @@
             <span class="faq-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
           </div>
           <div class="faq-answer">
-            <p>Não. O ForLabs é uma plataforma 100% online (Cloud SaaS). O motivo é simples: garantir que todos no laboratório e na gerência vejam os dados atualizados em tempo real, sem o risco de arquivos corrompidos ou versões desatualizadas de planilhas locais.</p>
+            <p>Não. O ForLabs é uma plataforma 100% online. O motivo é simples: garantir que todos no laboratório e na gerência vejam os dados atualizados em tempo real, sem o risco de arquivos corrompidos ou versões desatualizadas de planilhas locais.</p>
           </div>
         </div>
 
@@ -1192,7 +1250,7 @@
           <img src="icone.svg" alt="Logo" width="22" height="22">
           ForLabs
         </span>
-        <p style="max-width: 280px; line-height: 1.5;">O padrão ouro em gestão e controle de qualidade laboratorial.</p>
+        <p style="max-width: 280px; line-height: 1.5;">Controle de qualidade laboratorial,<br> num só lugar.</p>
       </div>
       <div class="footer-links-group">
         <a href="#vantagens">Vantagens</a>
@@ -1203,13 +1261,13 @@
     </div>
     <div class="footer-divider"></div>
     <div class="footer-bottom">
-      <p class="copyright">Copyright © 2026 ForLabs Inc. Todos os direitos reservados.</p>
+      <p class="copyright">Copyright © 2026 ForLabs. Todos os direitos reservados.</p>
       <div class="footer-legal">
         <a href="termos.html">Termos de Uso</a>
         <span class="sep">|</span>
         <a href="privacidade.html">Política de Privacidade</a>
       </div>
-      <p class="movcode-badge">Uma solução <a href="https://movcode.com.br" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><strong>Movcode</strong></a></p>
+      <p class="movcode-badge">Desenvolvido pela <a href="https://movcode.com.br" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><strong>Movcode</strong></a></p>
     </div>
   </div>
 </footer>

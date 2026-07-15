@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Termos de Uso — ForLabs</title>
 <link rel="icon" href="icone.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -18,11 +20,68 @@
     --font: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6; -webkit-font-smoothing: antialiased; padding-bottom: 60px; }
+  body { 
+    background: var(--bg); 
+    color: var(--text); 
+    font-family: var(--font); 
+    line-height: 1.6; 
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased; 
+    padding-bottom: 60px; 
+  }
   a { text-decoration: none; color: var(--blue); transition: opacity 0.2s; }
   a:hover { opacity: 0.8; }
-  .nav-simple { padding: 24px 32px; border-bottom: 1px solid var(--border); background: rgba(251,251,253,0.8); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 10; }
-  .logo { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.1rem; color: var(--text); }
+
+  /* ===== NAV IGUAL A INDEX (ALTURA CORRIGIDA) ===== */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(251,251,253,0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(210,210,215,0.5);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 32px;
+    max-width: 1080px;
+    margin: 0 auto;
+    min-height: 62px; /* Garante a altura idêntica à index com botão */
+  }
+  @media (max-width: 680px) {
+    .nav-inner { 
+      padding: 12px 20px; 
+      min-height: 58px; /* Mantém a proporção exata no mobile */
+    }
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+  .logo:hover { opacity: 1; }
+  .logo-mark {
+    width: 28px; 
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .logo-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* ===== CONTEÚDO ===== */
   .container { max-width: 760px; margin: 60px auto; padding: 0 24px; }
   .back-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 500; margin-bottom: 32px; }
   h1 { font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700; letter-spacing: -0.04em; margin-bottom: 8px; }
@@ -34,11 +93,13 @@
 </head>
 <body>
 
-<nav class="nav-simple">
-  <div style="max-width: 1080px; margin: 0 auto;">
+<nav>
+  <div class="nav-inner">
     <a href="index.html" class="logo">
-      <img src="icone.svg" alt="ForLabs" width="28" height="28">
-      ForLabs
+      <span class="logo-mark">
+        <img src="icone.svg" alt="ForLabs">
+      </span>
+      <span class="logo-text">ForLabs</span>
     </a>
   </div>
 </nav>
@@ -70,10 +131,19 @@
   <h2>5. Disponibilidade e Backups</h2>
   <p>Trabalhamos para garantir que a plataforma tenha alta disponibilidade (uptime). O sistema permite que os Administradores de cada empresa façam o download (backup) da base de dados bruta em arquivos CSV ou JSON a qualquer momento pelo painel de controle.</p>
 
-  <h2>6. Propriedade Intelectual</h2>
+  <h2>6. Cancelamento e Rescisão</h2>
+  <p>A empresa cliente pode cancelar o serviço a qualquer momento, mediante solicitação através dos canais oficiais de suporte. Recomendamos que o Administrador realize o backup completo dos dados (CSV/JSON) antes da efetivação do cancelamento. Após o encerramento da conta, os dados serão tratados conforme descrito na nossa Política de Privacidade, podendo ser excluídos definitivamente dos nossos servidores mediante solicitação.</p>
+
+  <h2>7. Limitação de Responsabilidade</h2>
+  <p>O ForLabs é fornecido "como está" ("as is"). Empenhamo-nos ao máximo para manter a plataforma disponível, segura e livre de erros, mas não garantimos disponibilidade ininterrupta. Não nos responsabilizamos por danos indiretos decorrentes de: (i) indisponibilidade temporária do serviço por motivos técnicos, de manutenção ou de terceiros (provedores de infraestrutura); (ii) uso inadequado da plataforma pela empresa cliente ou seus colaboradores; ou (iii) veracidade, precisão ou adequação técnica dos dados, testes e laudos inseridos pelos próprios usuários do laboratório.</p>
+
+  <h2>8. Propriedade Intelectual</h2>
   <p>A marca ForLabs, seus logotipos, código-fonte, design de interface e estrutura de software são de propriedade exclusiva da Movcode. É proibida a cópia, engenharia reversa ou distribuição não autorizada do sistema.</p>
 
-  <h2>7. Foro e Legislação Aplicável</h2>
+  <h2>9. Alterações destes Termos</h2>
+  <p>Estes Termos de Uso podem ser atualizados periodicamente para refletir melhorias na plataforma ou mudanças legais. Alterações relevantes serão comunicadas aos Administradores das empresas clientes pelos canais oficiais (e-mail cadastrado ou aviso no sistema). O uso continuado da plataforma após uma atualização representa a aceitação dos novos termos.</p>
+
+  <h2>10. Foro e Legislação Aplicável</h2>
   <p>Estes Termos de Uso são regidos pelas leis da República Federativa do Brasil. Fica eleito o foro da comarca de Ribeirão Preto, Estado de São Paulo, para dirimir quaisquer dúvidas ou controvérsias oriundas deste documento, com renúncia expressa a qualquer outro.</p>
 </div>
 
