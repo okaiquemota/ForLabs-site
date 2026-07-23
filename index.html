@@ -1263,9 +1263,9 @@
     <div class="footer-bottom">
       <p class="copyright">Copyright © 2026 ForLabs. Todos os direitos reservados.</p>
       <div class="footer-legal">
-        <a href="termos.html">Termos de Uso</a>
+        <a href="/termos">Termos de Uso</a>
         <span class="sep">|</span>
-        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="/privacidade">Política de Privacidade</a>
       </div>
       <p class="movcode-badge">Desenvolvido pela <a href="https://movcode.com.br" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><strong>Movcode</strong></a></p>
     </div>
@@ -1273,6 +1273,12 @@
 </footer>
 
 <script>
+  // Mágica para remover o index.html da URL silenciosamente caso alguém o acesse
+  if (window.location.pathname.endsWith('index.html')) {
+    const cleanUrl = window.location.href.replace('/index.html', '/');
+    window.history.replaceState(null, '', cleanUrl);
+  }
+
   // Intersection Observer para animações de fade in
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
@@ -1321,6 +1327,20 @@
       }
     });
   });
+
+
+  // Impede que o # apareça na URL ao clicar no menu
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    
+    if (targetElement) {
+      e.preventDefault(); // Proíbe o navegador de jogar o # na URL
+      targetElement.scrollIntoView({ behavior: 'smooth' }); // Faz a rolagem suave
+    }
+  });
+});
 </script>
 
 </body>
